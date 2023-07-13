@@ -36,4 +36,13 @@
       </form>
     </div>
   </div>
+  <div class="row" *ngIf="submit">
+    <hr>
+    <h3>Your entered data is : </h3>
+    {{user.name}}
+    {{user.email}}
+    {{user.question}}
+    {{user.answer}}
+    {{user.gender}}
+  </div>
 </div>

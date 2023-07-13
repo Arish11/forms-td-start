@@ -11,6 +11,14 @@ export class AppComponent {
   genders = ["male","female"]
   answer = ''
   defaultValue = 'pet'
+  user = {
+    name : "",
+    email : "",
+    question : "",
+    answer : "",
+    gender : "",
+  }
+  submit = false
 
   suggestUserName() {
     const suggestedName = 'Superuser';
@@ -21,7 +29,13 @@ export class AppComponent {
   // }
 
   onSubmit(){
-    console.log(this.formChild)
+   this.submit = true
+   this.user.name = this.formChild.value.userData.username
+   this.user.email = this.formChild.value.userData.mail
+   this.user.question = this.formChild.value.secret
+   this.user.answer = this.formChild.value.answer
+   this.user.gender = this.formChild.value.gender
+  this.formChild.reset()
   }
 
 }
