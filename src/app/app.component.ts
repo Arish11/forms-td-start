@@ -8,6 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   @ViewChild('formData') formChild : NgForm
+  genders = ["male","female"]
   answer = ''
   defaultValue = 'pet'
 
